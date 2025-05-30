@@ -1,12 +1,24 @@
-/* Base styles */
+/* Prevent scroll overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure padding/borders don’t overflow widths */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ========== MAIN STRUCTURE ========== */
+
 :root {
   min-height: 100vh;
-  padding: 16px;
   background: linear-gradient(to bottom right, #d0f0ff, #f3e0ff, #ffd6ec);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -16,6 +28,8 @@
   padding: 16px;
   width: 100%;
 }
+
+/* ========== TEXT ELEMENTS ========== */
 
 h1 {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -31,6 +45,16 @@ p.app-description {
   text-align: center;
   margin-bottom: 24px;
 }
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* ========== FORM ELEMENTS ========== */
 
 textarea,
 .result-box {
@@ -51,21 +75,18 @@ textarea,
   word-wrap: break-word;
 }
 
+/* ========== DROPDOWNS ========== */
+
 .dropdowns {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
   margin-bottom: 20px;
-  flex: 1;
-  padding: 12px 16px;
   border-radius: 12px;
-  border: 1px solid #ccc;
-  background-color: white;
   font-size: 14px;
   font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  flex-wrap: wrap;
 }
 
 .dropdowns:focus {
@@ -77,22 +98,17 @@ textarea,
   background-color: #fefefe;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
 select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border-radius: 10px;
   border: 1px solid #ccc;
   font-family: 'Segoe UI', sans-serif;
+  background-color: white;
 }
+
+/* ========== BUTTONS ========== */
 
 button,
 button.clear {
@@ -126,6 +142,8 @@ button.clear {
   margin-top: 1rem;
 }
 
+/* ========== FOOTER ========== */
+
 footer {
   text-align: center;
   font-size: 14px;
@@ -133,12 +151,12 @@ footer {
   margin-top: 30px;
 }
 
-/* Responsive styles */
+/* ========== RESPONSIVE ========== */
+
 @media (max-width: 768px) {
   .dropdowns {
     flex-direction: column;
     gap: 12px;
-    padding: 8px;
   }
 
   .button-group {
