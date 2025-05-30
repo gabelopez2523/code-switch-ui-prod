@@ -41,82 +41,89 @@ function App() {
   };
 
   return (
-    <>
-      <div style={{ maxWidth: 600, margin: 'auto', padding: '1rem' }}>
-        <h1>Code Switch</h1>
-        <p class="app-description">Code Switch so your bosses know you're professional, but not really...</p>
-        <label htmlFor="ScenarioContext">Email You're Responding To (Optional)</label>
-        <textarea
-            id="ScenarioContext"
-            value={scenarioContext}
-            onChange={(e) => setScenarioContext(e.target.value)}
-            rows={4}
-            placeholder="Paste the message being replied to here..."
-        ></textarea>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Your Raw Email:
-          </label>
-            <textarea
-              rows={8}
-              style={{ width: '100%', resize: 'vertical' }}
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              placeholder='Type or paste your email here...'
-            />
-          
+<>
+ <div className="container">
+  <h1>Code Switch</h1>
+  <p className="app-description">Code Switch so your bosses know you're professional, but not really...</p>
 
-          <div style={{ marginTop: '1rem' }} class="dropdowns">
-            <label>Scenario:</label>
-            <select value={scenario} onChange={(e) => setScenario(e.target.value)}>
-              <option value="general">General</option>
-              <option value="job_application">Job Application</option>
-              <option value="follow_up">Follow-Up</option>
-              <option value="networking">Networking</option>
-            </select>
+  <label htmlFor="ScenarioContext">Email You're Responding To (Optional)</label>
+  <textarea
+    id="ScenarioContext"
+    className="text-area"
+    value={scenarioContext}
+    onChange={(e) => setScenarioContext(e.target.value)}
+    rows={4}
+    placeholder="Paste the message being replied to here..."
+  />
 
-            <label style={{ marginLeft: '1rem' }}>Tone:</label>
-            <select value={tone} onChange={(e) => setTone(e.target.value)}>
-              <option value="professional">Professional</option>
-              <option value="friendly">Friendly</option>
-              <option value="confident">Confident</option>
-            </select>
+  <form onSubmit={handleSubmit}>
+    <label>Your Raw Email:</label>
+    <textarea
+      className="text-area"
+      rows={8}
+      value={userInput}
+      onChange={(e) => setUserInput(e.target.value)}
+      placeholder="Type or paste your email here..."
+    />
 
-            <label style={{ marginLeft: '1rem' }}>Language:</label>
-            <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-              <option value="english">English</option>
-              <option value="spanish">Spanish</option>
-            </select>
-          </div>
-        <div class="button-group">
-          <button type="submit" disabled={!userInput.trim() || loading} style={{ marginTop: '1rem' }}>
-            Press here to sound like a professional a$$ foo
-          </button>
-          <button class = "clear" type="button" onClick={handleClear} style={{ marginTop: '1rem' }}>
-            Clear
-          </button>
-          </div>
-        </form>
-
-        {loading && <p>Making you sound all sick...</p>}
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        {result && (
-          <div style={{ marginTop: '1rem' }}>
-            <label>Enhanced Email:</label>
-            <textarea
-              rows={12}
-              style={{ width: '100%', resize: 'vertical' }}
-              value={result}
-              readOnly
-            />
-          </div>
-        )}
+    <div className="dropdowns">
+      <div className="dropdown">
+        <label>Scenario:</label>
+        <select value={scenario} onChange={(e) => setScenario(e.target.value)}>
+          <option value="general">General</option>
+          <option value="job_application">Job Application</option>
+          <option value="follow_up">Follow-Up</option>
+          <option value="networking">Networking</option>
+        </select>
       </div>
-      <footer className="footer">
-        Please email feedback to: <a href="mailto:gabe.lopez2523@gmail.com">gabe.lopez2523@gmail.com</a>
-      </footer>
+
+      <div className="dropdown">
+        <label>Tone:</label>
+        <select value={tone} onChange={(e) => setTone(e.target.value)}>
+          <option value="professional">Professional</option>
+          <option value="friendly">Friendly</option>
+          <option value="confident">Confident</option>
+        </select>
+      </div>
+
+      <div className="dropdown">
+        <label>Language:</label>
+        <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+        </select>
+      </div>
+    </div>
+
+    <div className="button-group">
+      <button type="submit" disabled={!userInput.trim() || loading}>
+        Press here to sound like a professional a$$ foo
+      </button>
+      <button className="clear" type="button" onClick={handleClear}>
+        Clear
+      </button>
+    </div>
+  </form>
+
+  {loading && <p>Making you sound all sick...</p>}
+  {error && <p className="error">{error}</p>}
+  {result && (
+    <div className="result">
+      <label>Enhanced Email:</label>
+      <textarea
+        className="text-area"
+        rows={12}
+        value={result}
+        readOnly
+      />
+    </div>
+  )}
+</div>
+<footer className="footer">
+  Please email feedback to: <a href="mailto:gabe.lopez2523@gmail.com">gabe.lopez2523@gmail.com</a>
+</footer>
     
-    </>
+</>
   );
 }
 
