@@ -109,7 +109,7 @@ function App() {
         )}
       </div>
       <footer className="footer">
-        Please email feedback to: <a href="mailto:gabe.lopez2523@gmail.com">gabe.lopez2523@gmail.com</a>
+        Please email feedback to: <a href="mailto:codeswitchai@gmail.com">codeswitchai@gmail.com</a>
       </footer>
     </>
   );
