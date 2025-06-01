@@ -56,23 +56,25 @@ label {
 
 /* ========== FORM ELEMENTS ========== */
 
-textarea,
-.result-box {
+textarea {
   width: 100%;
   padding: 14px 20px;
   font-size: 16px;
   font-weight: 500;
   border: none;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
   background-color: #ffffff;
   color: #000;
   font-family: 'Segoe UI', sans-serif;
   outline: none;
   margin-bottom: 24px;
-  resize: vertical;
   overflow-wrap: break-word;
   word-wrap: break-word;
+}
+
+.result-box {
+  margin-top: 24px;
 }
 
 /* ========== DROPDOWNS ========== */
@@ -82,7 +84,7 @@ textarea,
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-between;
+  justify-content: left;
   margin-bottom: 20px;
   border-radius: 12px;
   font-size: 14px;
@@ -145,7 +147,8 @@ footer {
   text-align: center;
   font-size: 14px;
   color: #666;
-  margin-top: 30px;
+  /* margin-top: 10px; */
+  margin-bottom: 24px;
 }
 
 /* ========== RESPONSIVE ========== */

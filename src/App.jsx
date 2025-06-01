@@ -97,7 +97,7 @@ function App() {
         {loading && <p>Making you sound all sick...</p>}
         {error && <p className="error">{error}</p>}
         {result && (
-          <div className="result">
+          <div className="result-box">
             <label>Enhanced Email:</label>
             <textarea
               className="text-area"
