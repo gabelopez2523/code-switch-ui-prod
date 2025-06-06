@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { logPrompt } from './utils/logPrompt' // adjust path if needed
+
+
 
 function App() {
   const [userInput, setUserInput] = useState('');
@@ -24,7 +27,18 @@ function App() {
         tone,
         language,
       });
-      setResult(response.data.enhanced_email);
+      const enhancedEmail = response.data.enhanced_email;
+      setResult(enhancedEmail);
+      
+          // Log prompt and response to Supabase
+      await logPrompt({
+        prompt: userInput,
+        response: enhancedEmail,
+        tone,
+        language,
+        scenario_context: scenarioContext,
+      });
+
     } catch (err) {
       console.error(err);
       setResult('Something went wrong. Please try again.');
@@ -32,6 +46,7 @@ function App() {
       setLoading(false);
     }
   };
+ 
 
   const handleClear = () => {
     setUserInput('');
