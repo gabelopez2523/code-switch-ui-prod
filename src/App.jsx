@@ -101,7 +101,7 @@ function App() {
 
           <div className="button-group">
             <button type="submit" disabled={!userInput.trim() || loading}>
-              Press here to sound like a professional a$$ foo
+              Click here to Code Switch
             </button>
             <button className="clear" type="button" onClick={handleClear}>
               Clear
@@ -123,9 +123,10 @@ function App() {
           </div>
         )}
       </div>
-      <footer className="footer">
-        Please email feedback to: <a href="mailto:codeswitchai@gmail.com">codeswitchai@gmail.com</a>
-      </footer>
+ <footer className="footer">
+    Please email feedback to: <a href="mailto:codeswitchai@gmail.com">codeswitchai@gmail.com</a><br />
+  <a href="/privacy">Privacy Policy</a>
+</footer>
     </>
   );
 }
