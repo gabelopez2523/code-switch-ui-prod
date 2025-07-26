@@ -4,6 +4,26 @@ import React from 'react';
 function PrivacyPolicy() {
   return (
     <div className="container">
+      <a
+        href="/"
+        style={{
+          display: 'inline-block',
+          marginBottom: '1.5rem',
+          padding: '0.5rem 1rem',
+          backgroundColor: '#333',
+          color: '#fff',
+          borderRadius: '4px',
+          textDecoration: 'none',
+          fontWeight: '500',
+          fontSize: '0.95rem',
+          boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
+          transition: 'background-color 0.2s ease-in-out',
+        }}
+        onMouseOver={(e) => (e.target.style.backgroundColor = '#0056b3')}
+        onMouseOut={(e) => (e.target.style.backgroundColor = '#007bff')}
+      >
+        ← Home
+      </a>
       <h1>Privacy Policy</h1>
       <p><strong>Effective Date:</strong> July 24, 2025</p>
 

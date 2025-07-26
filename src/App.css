@@ -18,9 +18,10 @@ body {
 
 :root {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #d0f0ff, #f3e0ff, #ffd6ec);
+  background: linear-gradient(to bottom right, #d6feff, #71f0b0, #00ad23);
   font-family: 'Segoe UI', sans-serif;
 }
+
 
 .container {
   max-width: 640px;
@@ -122,14 +123,14 @@ button.clear {
 }
 
 button {
-  background: linear-gradient(to right, #caaaff, #c084fc);
+  background: #00ad23;
   color: white;
   border: none;
 }
 
 button.clear {
   background: whitesmoke;
-  color: #e63946;
+  color: #333;
   border: none;
 }
 
@@ -144,13 +145,25 @@ button.clear {
 /* ========== FOOTER ========== */
 
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'Segoe UI', sans-serif;
   font-size: 14px;
-  color: #666;
-  /* margin-top: 10px; */
+  color: #333;
   margin-bottom: 24px;
 }
 
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer .separator {
+  color: #999;
+}
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 768px) {

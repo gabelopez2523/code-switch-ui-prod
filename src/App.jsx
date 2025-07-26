@@ -59,7 +59,7 @@ function App() {
     <>
       <div className="container">
         <h1>Code Switch</h1>
-        <p className="app-description">Code Switch so your bosses know you're professional, but not really...</p>
+        <p className="app-description">CodeSwitch so your bosses know you're professional, but not really...</p>
 
         <label htmlFor="ScenarioContext">Email You're Responding To (Optional)</label>
         <textarea
@@ -101,7 +101,7 @@ function App() {
 
           <div className="button-group">
             <button type="submit" disabled={!userInput.trim() || loading}>
-              Click here to Code Switch
+              Click here to CodeSwitch
             </button>
             <button className="clear" type="button" onClick={handleClear}>
               Clear
@@ -124,7 +124,8 @@ function App() {
         )}
       </div>
  <footer className="footer">
-    Please email feedback to: <a href="mailto:codeswitchai@gmail.com">codeswitchai@gmail.com</a><br />
+    If you have feedback or need support please email our team at: <a href="mailto:codeswitchai@gmail.com">codeswitchai@gmail.com</a>
+    <span className="separator">|</span>
   <a href="/privacy">Privacy Policy</a>
 </footer>
     </>
