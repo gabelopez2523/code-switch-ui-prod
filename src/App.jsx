@@ -124,9 +124,11 @@ function App() {
         )}
       </div>
  <footer className="footer">
-    If you have feedback or need support please email our team at: <a href="mailto:codeswitchai@gmail.com">codeswitchai@gmail.com</a>
+    <a href="/privacy">Privacy Policy</a>
     <span className="separator">|</span>
-  <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Use</a>
+    <span className="separator">|</span>
+    <a href="/support">Support</a>
 </footer>
     </>
   );
