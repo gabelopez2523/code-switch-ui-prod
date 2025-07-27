@@ -153,7 +153,9 @@ footer {
   font-family: 'Segoe UI', sans-serif;
   font-size: 14px;
   color: #333;
+  margin-top: 24px;
   margin-bottom: 24px;
+
 }
 
 footer a {
